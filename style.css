@@ -1,0 +1,120 @@
+/* Definindo fontes e cores suaves */
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f4f4f9;
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #7f58ff; /* Cor de fundo do cabeçalho */
+  padding: 20px; /* Espaçamento interno */
+  border-radius: 0 0 10px 10px ; /* Cantos arredondados */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra do cabeçalho */
+  margin-bottom: 30px; /* Espaçamento abaixo do cabeçalho */
+}
+
+.logo {
+  width: 50px; /* Largura do logo */
+  height: auto; /* Altura automática para manter a proporção */
+  margin-right: 15px; /* Espaçamento à direita do logo */
+}
+
+.header-title {
+  font-size: 1.8rem; /* Tamanho da fonte do título */
+  color: #fff; /* Cor do texto */
+  margin: 0; /* Remove margem padrão */
+  text-align: center; /* Centraliza o texto */
+}
+
+
+.search-container {
+  margin-bottom: 20px;
+  text-align: center; /* Centraliza a barra de busca */
+}
+
+#search {
+  width: 100%;
+  max-width: 600px; /* Limita a largura máxima da barra de busca */
+  padding: 12px 15px; /* Espaçamento interno */
+  font-size: 1rem;
+  border: 2px solid #7f58ff; /* Cor da borda */
+  border-radius: 25px; /* Cantos arredondados */
+  outline: none; /* Remove o contorno padrão */
+  transition: border-color 0.3s ease; /* Transição suave na borda */
+}
+
+#search::placeholder {
+  color: #aaa; /* Cor do texto do placeholder */
+}
+
+#search:focus {
+  border-color: #5a47d6; /* Cor da borda quando em foco */
+  box-shadow: 0 0 5px rgba(127, 88, 255, 0.5); /* Sombra para destaque */
+}
+
+
+.faq-container {
+  width: 80%;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.faq-title {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+.faq-item {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  padding: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.faq-item:hover {
+  background-color: #f0f0f5;
+}
+
+.faq-question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.faq-question h2 {
+  font-size: 1.5rem;
+  color: #333;
+  margin: 0;
+}
+
+.icon {
+  font-size: 1.5rem;
+  color: #7f58ff;
+}
+
+.faq-answer p {
+  font-size: 1rem;
+  color: #555;
+  padding-top: 15px;
+}
+
+.faq-answer {
+  max-height: 0; /* Oculta a resposta inicialmente */
+  overflow: hidden; /* Esconde qualquer conteúdo que exceda a altura */
+  transition: max-height 0.3s ease; /* Transição suave da altura */
+  padding: 0; /* Inicialmente sem preenchimento */
+}
+
+.faq-item.active .faq-answer {
+  padding: 15px; /* Adiciona preenchimento quando ativo */
+}
+

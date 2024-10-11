@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FAQ - Troubleshooting Guide</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="/pda.png" type="image/x-icon">
+  </head>
+  <body>
+    <header class="header">
+      <img
+        src="https://programadoresdoamanha.org/assets/Simbolo_PDA_FundoBranco.png"
+        alt="Logo"
+        class="logo"
+      />
+      <h1 class="header-title">Project Final English M5, Squad 05</h1>
+    </header>
+    <div class="faq-container">
+      <h1 class="faq-title">Troubleshooting Guide</h1>
+
+      <div class="search-container">
+        <input type="text" id="search" placeholder="Buscar..." />
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question" id="q1">
+          <h2>01. Problem: Web Page Does Not Load Properly</h2>
+          <span class="icon">+</span>
+          
+        </div>
+        <div class="faq-answer" id="a1">
+          <p><strong>Common Signs:</strong></p>
+          <ul>
+            <li>Page elements are missing or misaligned.</li>
+            <li>The page appears broken or incomplete.</li>
+          </ul>
+          <p><strong>Solutions:</strong></p>
+          <ul>
+            <li>
+              Clear the browser cache. In Chrome, press Ctrl + Shift + R or go
+              to Settings &gt; Privacy and security &gt; Clear browsing data
+              &gt; Cached images and files.
+            </li>
+            <li>
+              Disable browser extensions. In Chrome, go to More Tools &gt;
+              Extensions, disable all extensions, and reload the page.
+            </li>
+            <li>
+              Check error logs. Press F12 to open the browser console and see if
+              there are any error messages, such as files that failed to load.
+            </li>
+            <li>
+              Use incognito mode to open the page and check if the problem
+              persists.
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question" id="q2">
+          <h2>02. Problem: Authentication Error (Login Fails Repeatedly)</h2>
+          <span class="icon">+</span>
+        </div>
+        <div class="faq-answer" id="a2">
+          <p><strong>Common Signs:</strong></p>
+          <ul>
+            <li>
+              The login fails multiple times, even with the correct password.
+            </li>
+            <li>Error messages such as "Authentication failed."</li>
+          </ul>
+          <p><strong>Solutions:</strong></p>
+          <ul>
+            <li>
+              Clear cookies and site data. In Chrome, go to Settings &gt;
+              Privacy and security &gt; Clear browsing data &gt; Cookies.
+            </li>
+            <li>
+              Check the system clock to ensure the device is set to the correct
+              time zone and time.
+            </li>
+            <li>
+              Reset the password or ensure that you are using the correct and
+              up-to-date password.
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question" id="q3">
+          <h2>03. Problem: Browser Incompatibility</h2>
+          <span class="icon">+</span>
+        </div>
+        <div class="faq-answer" id="a3">
+          <p>
+            Browser incompatibility can cause layout errors and functionalities
+            to vary between different browsers, leading to visual and functional
+            issues.
+          </p>
+          <p>
+            <strong>Example Scenario:</strong> Some outdated browsers may render
+            the same website in a "broken" manner. For example, a website may
+            display errors in one browser while appearing perfect in another. A
+            common issue is the difference in font rendering or incorrect page
+            display due to different browser versions, such as Internet
+            Explorer.
+          </p>
+          <p><strong>Common Signs:</strong></p>
+          <ul>
+            <li>
+              Discrepancies in page appearance, such as misaligned design
+              elements.
+            </li>
+            <li>
+              Scripts functioning inconsistently across different browsers.
+            </li>
+            <li>
+              Font rendering issues causing text to appear distorted or blurred.
+            </li>
+            <li>CSS or HTML features not supported in all browser versions.</li>
+          </ul>
+          <p><strong>Solutions:</strong></p>
+          <ul>
+            <li>
+              Test in other browsers. Tools like Adobe BrowserLab and Browsera
+              can help identify compatibility issues across different browsers.
+            </li>
+            <li>
+              Avoid browser-specific HTML elements. Use HTML and CSS tags that
+              are compatible with multiple browsers.
+            </li>
+            <li>
+              Check functions. Different browsers may process languages like
+              JavaScript in unique ways.
+            </li>
+            <li>
+              Ensure that all plugins and add-ons are compatible with the
+              browsers being tested.
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question" id="q4">
+          <h2>04. Problem: Broken Client-side Access Control</h2>
+          <span class="icon">+</span>
+        </div>
+        <div class="faq-answer" id="a4">
+          <p>
+            Broken Client-side Access Control occurs when insufficient controls
+            allow unauthorized access to client-side assets, potentially leading
+            to data exfiltration or DOM manipulation for malicious purposes.
+          </p>
+          <p>
+            <strong>Example Scenario:</strong> A web application allows users to
+            manage their personal profiles. However, the client-side code does
+            not validate user permissions properly. An attacker can manipulate
+            the JavaScript in their browser to change the user ID in an API
+            call, allowing access to another user's profile data.
+          </p>
+          <p><strong>Causes:</strong></p>
+          <ul>
+            <li>
+              Weak Authentication: Inadequate checks allow unauthorized users to
+              access sensitive functions.
+            </li>
+            <li>
+              Insecure APIs: API endpoints lacking proper security measures.
+            </li>
+            <li>
+              Poor Data Storage: Sensitive data stored in local storage or
+              cookies without encryption.
+            </li>
+            <li>
+              DOM Vulnerabilities: Weak controls can allow attackers to
+              manipulate the DOM.
+            </li>
+          </ul>
+          <p><strong>Impacts:</strong></p>
+          <ul>
+            <li>Data Breach: Exposure of sensitive information.</li>
+            <li>
+              Malicious Exploits: Unauthorized actions, leading to account
+              takeovers.
+            </li>
+            <li>
+              Loss of Trust: Users may lose confidence in the application’s
+              security.
+            </li>
+          </ul>
+          <p><strong>Mitigation Strategies:</strong></p>
+          <ul>
+            <li>Strong Authentication: Implement robust methods like OAuth.</li>
+            <li>
+              Secure APIs: Enforce strict access controls and server-side
+              validation.
+            </li>
+            <li>
+              Sensitive Data Handling: Avoid storing sensitive information on
+              the client side.
+            </li>
+            <li>
+              Regular Audits: Conduct security assessments and penetration
+              testing.
+            </li>
+            <li>
+              Content Security Policy (CSP): Control resource loading and
+              mitigate script injection risks.
+            </li>
+            <li>
+              Input Sanitization: Validate all user inputs to prevent XSS
+              attacks.
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question" id="q5">
+          <h2>05. Problem: Inappropriate Resources</h2>
+          <span class="icon">+</span>
+        </div>
+        <div class="faq-answer" id="a5">
+          <p>
+            A ‘resource not found’ error occurs when a system or application
+            cannot find a specific file, directory, or asset.
+          </p>
+          <p>
+            <strong>Example Scenario:</strong> A user tries to open a document
+            in a specific folder and receives a “file not found” message.
+          </p>
+          <p><strong>Common Signs:</strong></p>
+          <ul>
+            <li>Error 404</li>
+            <li>Missing files</li>
+            <li>Broken links</li>
+            <li>Application may crash.</li>
+          </ul>
+          <p><strong>Solutions:</strong></p>
+          <ul>
+            <li>Check file paths.</li>
+            <li>Check permissions.</li>
+            <li>Look for the resource in a different location.</li>
+            <li>Reinstall the application.</li>
+            <li>Contact the software developer.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question" id="q6">
+          <h2>06. Problem: Unresponsive on Some Devices</h2>
+          <span class="icon">+</span>
+        </div>
+        <div class="faq-answer" id="a6">
+          <p>
+            A website or app is unresponsive when the interface does not adapt
+            well to different screen sizes and devices.
+          </p>
+          <p>
+            <strong>Example Scenario:</strong> A user browsing an e-commerce
+            site on a smartphone notices small buttons, indistinct text, and a
+            page that does not fit on the screen, making navigation difficult.
+          </p>
+          <p><strong>Common Signs:</strong></p>
+          <ul>
+            <li>
+              Elements that are not aligned, overlapping, or scrolling
+              horizontally.
+            </li>
+            <li>
+              Fonts that are too small or large, or text that is truncated.
+            </li>
+            <li>Buttons that are too small or unresponsive to touch.</li>
+            <li>Hidden or off-screen content.</li>
+          </ul>
+          <p><strong>Solutions:</strong></p>
+          <ul>
+            <li>
+              Create styles for different screen sizes, allowing the layout to
+              adapt dynamically.
+            </li>
+            <li>
+              Use frameworks like Bootstrap or Materialize to speed up
+              responsive layout development.
+            </li>
+            <li>Optimize images.</li>
+            <li>Test on different devices.</li>
+            <li>Prioritize content.</li>
+            <li>Use the viewport meta tag.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
